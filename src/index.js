@@ -32,7 +32,7 @@ export class Selector extends Component{
         //搜索按钮
         submitButton:null,
         //默认城市
-        defaultCity:'',
+        defaultValue:'',
         //历史记录
         historyKey:'__history_citys__',
         //提交回调函数
@@ -138,8 +138,6 @@ export class Selector extends Component{
                 data = data.match(reg);
                 this._cache[key] = data ? data :[];
                 list = this._cache[key];
-            }else{
-
             }
             //todo 更改state重新渲染
             this.setState({
@@ -149,6 +147,10 @@ export class Selector extends Component{
 
         }else{
             this.isInit = true;
+            this.setState({
+                isSearch:false,
+                data:data
+            });
             this.getData();
         }
     }
@@ -342,6 +344,7 @@ export class Selector extends Component{
         //let data = typeof(this.state.data)=='string' ? JSON.parse(this.state.data) :this.state.data;
 
         let letters = [];
+
         return (
             <div>
             <div className="list-box">
@@ -390,7 +393,7 @@ export class Selector extends Component{
         return (
             <div className="w-search">
                 <div className="search-input-box">
-                    <input type="search" placeholder={this.props.placeholder} className="search" ref="j-search" onKeyUp={::this.searchInterceptor} onInput={::this.searchInterceptor} />
+                    <input type="search" placeholder={this.props.placeholder} className="search" ref="j-search" onKeyUp={::this.searchInterceptor} onInput={::this.searchInterceptor} defaultValue={this.props.defaultValue} />
                     <a href="javascript:void(0);" className="search-buttom clear" ref="j-clear" onClick={::this.clear}>x</a>
                 </div>
 

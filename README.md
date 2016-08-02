@@ -1,16 +1,46 @@
-# module-template
+# ph-selector
 
-这是一个模块组件开发的脚手架项目，用于快速搭建模块开发项目。
+一款类似城市选择器的组件，应用于移动端
 
 ## 使用
 
-- 下载此项目至本地，修改项目名称和package.json里的信息；
-- git remote rm origin
-- git remote add origin {你的仓库地址}  例如：git remote add origin git@code.dianpingoa.com:pc-trade-f2e/apollo-template-static.git
-- git fetch
-- git pull origin master
+```js
 
-- 全局安装smartDoc 用于生成文档
+	import {Selector} from 'ph-selector';
+	import ReactDom from 'react/lib/ReactDOM';
+	
+	ReactDom.render(
+        <Selector />,
+        document.getElementById('root')
+    );
+```
+
+## API
+
+```js
+
+	//数据请求地址
+	url:'/mocks/cities',
+	//是否本地缓存数据
+	isCache:true,
+	//缓存的id
+	cacheKey:'__searchList__',
+	//placeholder
+	placeholder:'请输入城市名查询',
+	//缓存过期时间
+	cacheExpire:24 * 3600,
+	//搜索按钮
+	submitButton:null,
+	//默认值
+	defaultValue:'',
+	//历史记录
+	historyKey:'__history_citys__',
+	//提交回调函数
+	successCallback: function(){},
+	searchCallback: function(){},
+	initCallback: function(){}
+
+```
 
 ## Command
 
