@@ -288,7 +288,7 @@ export class Selector extends Component{
                 }}>
                     {
                         letters.map((item)=>{
-                            return <a href={"#"+item}>{item}</a>
+                            return <a href={"#"+item} key={item}>{item}</a>
                         })
                     }
                 </div>
@@ -317,10 +317,10 @@ export class Selector extends Component{
                 <a href="#" className="t">搜索历史</a>
                 {
                     history.map((item)=>{
-                        return <a href="javascript:void(0);" className="item" onClick={this.activeHandler.bind(this,item.name,item.id)} key={item.name}>{item.name}</a>
+                        return <a href="javascript:void(0);" className="item" onClick={this.activeHandler.bind(this,item.name,item.id)} key={item.id}>{item.name}</a>
                     })
                 }
-                <a href="javascript:void(0);" className="clear j-clear"  onClick={::this.clear}>清除搜索历史</a>
+                <a href="javascript:void(0);" className="clear j-clear" key="qingchulishi"  onClick={::this.clear}>清除搜索历史</a>
             </div>
 
         );
