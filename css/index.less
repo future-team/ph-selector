@@ -1,0 +1,94 @@
+.w-search{
+    .search-input-box{
+        display: flex;
+        display: -webkit-flexbox;
+        display: -webkit-box;
+        position: relative;
+        //background-color: #f8f8f8;
+        padding: 0.93rem 0.8rem 0.5rem 0.8rem;
+        .search{
+            position: relative;
+            flex: 1;
+            -webkit-flex: 1;
+            -webkit-box-flex: 1;
+            height: 2.5rem;
+            display: block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            font-size: 1rem;
+            border-radius: 4px;
+            -webkit-appearance: none;
+        }
+        .search-buttom{
+            margin-left: 0.5rem;
+            width: 2.5rem;
+            display: block;
+            line-height: 2.5rem;
+            text-align: center;
+            color: #ee5511;
+        }
+        .clear{
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            background: #ccc;
+            text-align: center;
+            line-height: 14px;
+            color: #fff;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            top: 50%;
+            margin-top: -8px;
+            right: 23px;
+            font-size: 12px;
+            display: none;
+        }
+    }
+    .list-box{
+        a{
+            color: #323232;
+            padding-left: 0.625rem;
+            border-bottom: 1px solid #e3e3e3;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: block;
+            text-decoration: none;
+            &.item{
+                background: #fff;
+            }
+            &.t{
+                color: #999;
+            }
+            &.clear{
+                text-align: center;
+                background: #fff;
+            }
+        }
+
+    }
+    .nav{
+        height: auto;
+        margin: auto;
+        position: fixed;
+        top: 10px;
+        right: 0px;
+        //background: #fff;
+        text-align: center;
+        a{
+            display: block;
+            margin: 0px;
+            font-size: 10px;
+            color: #000088;
+            padding: 1px 5px;
+            border: none;
+            text-decoration: none;
+        }
+    }
+
+}
