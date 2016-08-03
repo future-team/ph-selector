@@ -42,6 +42,10 @@
 
 ```
 
+## 数据格式
+
+请参考example/mocks/cities
+
 ## Command
 
 ```
