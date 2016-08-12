@@ -378,7 +378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            letters.map(function (item) {
 	                return _react2['default'].createElement(
 	                    'a',
-	                    { href: "#" + item },
+	                    { href: "#" + item, key: item },
 	                    item
 	                );
 	            })
@@ -418,13 +418,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	            history.map(function (item) {
 	                return _react2['default'].createElement(
 	                    'a',
-	                    { href: 'javascript:void(0);', className: 'item', onClick: _this5.activeHandler.bind(_this5, item.name, item.id), key: item.name },
+	                    { href: 'javascript:void(0);', className: 'item', onClick: _this5.activeHandler.bind(_this5, item.name, item.id), key: item.id },
 	                    item.name
 	                );
 	            }),
 	            _react2['default'].createElement(
 	                'a',
-	                { href: 'javascript:void(0);', className: 'clear j-clear', onClick: this.clear.bind(this) },
+	                { href: 'javascript:void(0);', className: 'clear j-clear', key: 'qingchulishi', onClick: this.clear.bind(this) },
 	                '清除搜索历史'
 	            )
 	        );
